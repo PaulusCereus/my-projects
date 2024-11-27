@@ -106,4 +106,4 @@ git init # Создать пустой репозиторий в текщей п
 git clone URL # Скопировать .git репозиторий по ссылке URL
 # Ссылка обычно представляет из себя
 # https://github.com/username/repository.git
-
+```
