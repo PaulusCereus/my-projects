@@ -87,3 +87,23 @@ git branch new_branch
 ```bash
 git checkout new_branch
 ```
+
+---
+
+## Установка и настройка
+
+```bash
+git --version # Проверяем есть ли git и смотрим его версию
+git config --global user.name "Your Name" # Настроить имя пользователя
+git config --global user.email "Your Email" # Настроить почту пользователя
+git config --list # Проверить текущие настройки git
+```
+
+## Работа с репозиториями
+
+```bash
+git init # Создать пустой репозиторий в текщей папке для дальнейшего отслеживания
+git clone URL # Скопировать .git репозиторий по ссылке URL
+# Ссылка обычно представляет из себя
+# https://github.com/username/repository.git
+
