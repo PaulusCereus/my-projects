@@ -35,9 +35,31 @@ import json
 # на чтение ("r") (("read")) и сохраняем указатель на файл в виде file
 # Использование контекстного менеджера удобно, так как при завершении работы
 # нам не нужно вручную закрывать файл
-with open("./json/data.json", "r") as file:
-    data = json.load(file)
+# with open("./json/data.json", "r") as file:
+#     data = json.load(file)
 
-print(data)
-print(data["skills"])
-print(data["name"])
+# print(data)
+# print(data["skills"])
+# print(data["name"])
+
+# Запись данных в JSON файл
+# ------------------------------------------------------------
+
+data = {
+    "name": "Nicola Nicolovich",
+    "age": 52,
+    "hobbies": [
+        "Main Pilot",
+        "Devil Breaker",
+        "Tier 1 Speedrunner",
+        "Pyaterochka cashier",
+        "GrandSon of Miyagi",
+        "Cookie Clicker",
+        "Serbian Partizan",
+        "Owner of Faith"
+    ],
+}
+
+with open("./json/output.json", "w") as file:
+    json.dump(data, file, indent=4)
+
