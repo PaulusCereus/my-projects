@@ -18,7 +18,7 @@ JSON (JavaScript Onject Notation) - формат обмена данными, к
 {
     "name": "Alice",
     "age": 25,
-    "is_stident": false,
+    "is_student": false,
     "skills": ["Python", "HTML/CSS/JS", "SQL"],
     "address": {
         "city": "Moscow",
