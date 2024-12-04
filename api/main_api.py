@@ -18,12 +18,32 @@
 
 # ----------------------------------------------------
 
+# import requests
+
+# response = requests.get("https://api.quotable.io/random")
+
+# if response.status_code == 200:
+#     data = response.json()
+#     print(f"Случайная цитата: '{data['content']}' - {data['author']}")
+# else:
+#     print("Не удалось получить цитату")
+
+
+# ----------------------------------------------------
+
 import requests
 
-response = requests.get("https://api.quotable.io/random")
+url = "https://jsonplaceholder.typicode.com/posts"
+data = {
+    "title": "Hello, API!",
+    "body": "This is a test post",
+    "userId": 1
+}
 
-if response.status_code == 200:
-    data = response.json()
-    print(f"Случайная цитата: '{data['content']}' - {data['author']}")
+response = requests.post(url, json=data)
+
+if response.status_code == 201:
+    print("Данные успешно отправлены")
+    print(f"Ответ сервера: {response.json()}")
 else:
-    print("Не удалось получить цитату")
+    print(f"Ошибка: {response.status_code}")
